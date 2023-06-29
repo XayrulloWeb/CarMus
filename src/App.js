@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import {Route, Switch} from "react-router-dom";
+import routes from "./routes";
+import './Style/style.css';
+import Header from "./Header & Footer/Header/Header";
+import Footer from "./Header & Footer/Footer/Footer";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="wrapper">
+            <Header/>
+
+
+            <Switch>
+                {
+                    routes.map(item => {
+                        return <Route
+                            key={item.id}
+                            component={item.component}
+                            path={item.path}
+                            exact
+                        />
+                    })
+                }
+            </Switch>
+
+            <Footer/>
+        </div>
     </div>
   );
 }

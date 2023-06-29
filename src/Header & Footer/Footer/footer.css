@@ -1,0 +1,19 @@
+.footer{
+    background: #121412;
+    border-top: 1px solid #898989;
+    padding: 35px 0;
+}
+.footer_start{
+    display: flex;
+    justify-content: center;
+}
+.footer_start span{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
